@@ -121,18 +121,7 @@
 
         }
     </style>
-<script>
-    // document.lastModified でファイルの最終更新日時を取得
-    const lastModified = new Date(document.lastModified);
-    
-    // 年、月、日を取得
-    const year = lastModified.getFullYear();
-    const month = String(lastModified.getMonth() + 1).padStart(2, '0');
-    const day = String(lastModified.getDate()).padStart(2, '0');
-    
-    // 画面に表示
-    document.getElementById('update-date').textContent = `${year}年${month}月${day}日`;
-</script>
+
 
 </head>
 <body>
@@ -201,6 +190,18 @@
     </main>
     <div class="update">最終更新日: <span id="update-date"></span></div>
 </div>
+
+<script>
+    const lastModified = new Date(document.lastModified);
+    const year = lastModified.getFullYear();
+    const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+    const day = String(lastModified.getDate()).padStart(2, '0');
+    
+    const dateElement = document.getElementById('update-date');
+    if (dateElement) {
+        dateElement.textContent = `${year}年${month}月${day}日`;
+    }
+</script>
 
 </body>
 </html>
