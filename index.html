@@ -2,10 +2,205 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>私のGitHub Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NT Products</title>
+    <style>
+        :root {
+            --primary-color: #2b542c;
+            --text-color: #333333;
+            --sub-text-color: #666666;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            letter-spacing: 0.05em;
+        }
+
+        /* 年別セクション */
+        .year-section {
+            margin-bottom: 40px;
+        }
+
+        .year-title {
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        /* 作品リスト */
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .product-month {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            min-width: 45px;
+            padding-top: 2px;
+        }
+
+        .product-content {
+            flex-grow: 1;
+        }
+
+        .product-title {
+            margin: 0 0 6px 0;
+            font-size: 1.2rem;
+        }
+
+        .product-title a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+
+        .product-title a:hover {
+            text-decoration: underline;
+        }
+
+        /* 概要・コメント（文字サイズ小さめ） */
+        .product-description {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--sub-text-color);
+            line-height: 1.5;
+        }
+
+        .info {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--sub-text-color);
+            line-height: 1.5;
+        }
+
+        .update {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--sub-text-color);
+            line-height: 1.5;
+            text-align: center;
+
+        }
+    </style>
+<script>
+    // document.lastModified でファイルの最終更新日時を取得
+    const lastModified = new Date(document.lastModified);
+    
+    // 年、月、日を取得
+    const year = lastModified.getFullYear();
+    const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+    const day = String(lastModified.getDate()).padStart(2, '0');
+    
+    // 画面に表示
+    document.getElementById('update-date').textContent = `${year}年${month}月${day}日`;
+</script>
+
 </head>
 <body>
-    <h1>こんにちは！GitHub Pagesへようこそ！</h1>
-    <p>これは私の最初のウェブサイトです。</p>
+
+<div class="container">
+    <header>
+        <h1>NT Products</h1>
+    </header>
+
+    <div class="info">
+    作ったものリスト。　連絡先　FB X
+    </div>
+
+    <main>
+        <!-- 2026年 -->
+        <section class="year-section">
+            <h2 class="year-title">2026</h2>
+            <ul class="product-list">
+                
+                <li class="product-item">
+                    <span class="product-month">11月</span>
+                    <div class="product-content">
+                        <h3 class="product-title">
+                            <a href="products/udon-robot.html">伊勢うどんダンスロボットミニ</a>
+                        </h3>
+                        <p class="product-description">
+                            物理ブロックを配置してロボットを動作させる。スマホからプログラミングもできる。
+                        </p>
+                    </div>
+                </li>
+
+                <li class="product-item">
+                    <span class="product-month">6月</span>
+                    <div class="product-content">
+                        <h3 class="product-title">
+                            メガネライト
+                        </h3>
+                        <p class="product-description">
+                            夜間の手元作業用に試作したウェアラブルLEDライト。フレームに小型バッテリーを内蔵。
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- 2025年 -->
+        <section class="year-section">
+            <h2 class="year-title">2025</h2>
+            <ul class="product-list">
+
+                <li class="product-item">
+                    <span class="product-month">11月</span>
+                    <div class="product-content">
+                        <h3 class="product-title">
+                            <a href="products/sample-product.html">つくったもの</a>
+                        </h3>
+                        <p class="product-description">
+                            ここに作品の概要や作ったときのコメントを記載します。
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+    <div class="update">最終更新日: <span id="update-date"></span></div>
+</div>
+
 </body>
 </html>
