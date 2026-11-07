@@ -132,11 +132,13 @@
     </header>
 
     <div class="info">
-    作ったものリスト。　連絡先　FB X
+    作ったものリスト。　連絡先　
+    <a href="https://www.facebook.com/nakanishi.tetsushi">FB</a>
+    <a href="https://x.com/tetettete">X</a>
     </div>
 
     <main>
-        <!-- 2026年 -->
+
         <section class="year-section">
             <h2 class="year-title">2026</h2>
             <ul class="product-list">
@@ -145,48 +147,72 @@
                     <span class="product-month">11月</span>
                     <div class="product-content">
                         <h3 class="product-title">
-                            <a href="products/udon-robot.html">伊勢うどんダンスロボットミニ</a>
+                            <a href="https://sites.google.com/view/vectorplan/event/IGF2026">伊勢うどんダンスロボットミニ</a>
                         </h3>
                         <p class="product-description">
                             物理ブロックを配置してロボットを動作させる。スマホからプログラミングもできる。
                         </p>
                     </div>
                 </li>
-
-                <li class="product-item">
-                    <span class="product-month">6月</span>
-                    <div class="product-content">
-                        <h3 class="product-title">
-                            メガネライト
-                        </h3>
-                        <p class="product-description">
-                            夜間の手元作業用に試作したウェアラブルLEDライト。フレームに小型バッテリーを内蔵。
-                        </p>
-                    </div>
-                </li>
-
             </ul>
         </section>
 
-        <!-- 2025年 -->
         <section class="year-section">
-            <h2 class="year-title">2025</h2>
+            <h2 class="year-title">2024</h2>
             <ul class="product-list">
-
+                
                 <li class="product-item">
                     <span class="product-month">11月</span>
                     <div class="product-content">
                         <h3 class="product-title">
-                            <a href="products/sample-product.html">つくったもの</a>
+                            <a href="https://sites.google.com/view/vectorplan/event/IGF2024">伊勢うどんダンスロボット</a>
                         </h3>
                         <p class="product-description">
-                            ここに作品の概要や作ったときのコメントを記載します。
+                            物理ブロックを配置してロボットを動作させる。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="year-section">
+            <h2 class="year-title">2017</h2>
+            <ul class="product-list">
+
+                <li class="product-item">
+                    <span class="product-month">2月</span>
+                    <div class="product-content">
+                        <h3 class="product-title">
+                            <a href="https://sites.google.com/view/vectorplan/">Vector Project</a>
+                        </h3>
+                        <p class="product-description">
+                            巨大ロボット建造計画Vectorプロジェクト、巨大ロボットはまだ建造していない。
                         </p>
                     </div>
                 </li>
 
             </ul>
         </section>
+
+        <section class="year-section">
+            <h2 class="year-title">2013</h2>
+            <ul class="product-list">
+
+                <li class="product-item">
+                    <span class="product-month">4月</span>
+                    <div class="product-content">
+                        <h3 class="product-title">
+                            ギークカフェ伊勢
+                        </h3>
+                        <p class="product-description">
+                            3年営業して一旦閉鎖、場所を移して現在（2026年時点）新店舗を建設中です。　開店は2028年ぐらいか？
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
     </main>
     <div class="update">最終更新日: <span id="update-date"></span></div>
 </div>
@@ -199,7 +225,7 @@
     
     const dateElement = document.getElementById('update-date');
     if (dateElement) {
-        dateElement.textContent = `${year}年${month}月${day}日`;
+        dateElement.textContent = `${year}.${month}.${day}`;
     }
 </script>
 
